@@ -1,0 +1,29 @@
+{
+  "status": "transcribed from supplied notebook saved outputs; not independently reproduced",
+  "source_notebook_sha256": "93efc0afc98c39c820a74c2196cd4bc0525187b480e786c84e3f39aa8bfc6bc5",
+  "source_dataset_sha256": "cff2c899a97ecd629415cb22f59186000e74e1c0a78cfae036c0a53025419b5e",
+  "test_years": [
+    2016,
+    2017,
+    2018
+  ],
+  "test_rows": 3165,
+  "test_positives": 30,
+  "accuracy": 0.9529225908372828,
+  "recall": 0.6,
+  "precision": 0.11612903225806452,
+  "f1": 0.1945945945945946,
+  "confusion_matrix_inferred_from_exact_metrics": {
+    "tn": 2998,
+    "fp": 137,
+    "fn": 12,
+    "tp": 18
+  },
+  "limitations": [
+    "SMOTE before validation folds",
+    "cross-validation row order not chronological",
+    "full-history cohort selection",
+    "feature exploration before holdout split",
+    "saved cells executed out of order; metric labels disagree with source"
+  ]
+}

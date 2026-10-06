@@ -1,0 +1,193 @@
+{
+  "experiment": "chronological_revision_v1",
+  "seed": 42,
+  "trials": 30,
+  "dataset_sha256": "cff2c899a97ecd629415cb22f59186000e74e1c0a78cfae036c0a53025419b5e",
+  "python_version": "3.14.3",
+  "package_versions": {
+    "numpy": "2.4.2",
+    "pandas": "2.3.3",
+    "lightgbm": "4.6.0",
+    "scikit-learn": "1.8.0",
+    "imbalanced-learn": "0.14.1",
+    "optuna": "4.6.0",
+    "matplotlib": "3.10.8"
+  },
+  "target": "last observed record of a company labelled failed; retrospective proxy",
+  "cohort": "250 < median X8 < 2000, computed using years up to each training cutoff",
+  "cohort_bounds": {
+    "lower_exclusive": 250,
+    "upper_exclusive": 2000
+  },
+  "features": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6",
+    "X7",
+    "X8",
+    "X9",
+    "X10",
+    "X11",
+    "X12",
+    "X13",
+    "X14",
+    "X15",
+    "X16",
+    "X17",
+    "X18"
+  ],
+  "data_rows": 78682,
+  "data_companies": 8971,
+  "year_min": 1999,
+  "year_max": 2018,
+  "training_rows": 21144,
+  "training_positives": 122,
+  "smote_training_rows_per_class": 21022,
+  "test_rows": 2969,
+  "test_positives": 28,
+  "test_companies": 1076,
+  "test_positive_prevalence": 0.009430784776018861,
+  "all_negative_accuracy": 0.9905692152239811,
+  "baseline_cv": [
+    {
+      "training_through": 2005,
+      "validation_start": 2006,
+      "validation_end": 2007,
+      "training_rows": 9140,
+      "training_positives": 25,
+      "validation_rows": 2339,
+      "validation_positives": 20,
+      "average_precision": 0.0357394544307711
+    },
+    {
+      "training_through": 2007,
+      "validation_start": 2008,
+      "validation_end": 2009,
+      "training_rows": 12155,
+      "training_positives": 42,
+      "validation_rows": 2467,
+      "validation_positives": 23,
+      "average_precision": 0.061844764111673195
+    },
+    {
+      "training_through": 2009,
+      "validation_start": 2010,
+      "validation_end": 2011,
+      "training_rows": 14525,
+      "training_positives": 61,
+      "validation_rows": 2266,
+      "validation_positives": 18,
+      "average_precision": 0.19504828004706007
+    },
+    {
+      "training_through": 2011,
+      "validation_start": 2012,
+      "validation_end": 2013,
+      "training_rows": 16765,
+      "training_positives": 77,
+      "validation_rows": 2163,
+      "validation_positives": 20,
+      "average_precision": 0.15159769841117915
+    },
+    {
+      "training_through": 2013,
+      "validation_start": 2014,
+      "validation_end": 2015,
+      "training_rows": 18953,
+      "training_positives": 95,
+      "validation_rows": 2128,
+      "validation_positives": 25,
+      "average_precision": 0.10561311573817696
+    }
+  ],
+  "baseline_mean_cv_ap": 0.10996866254777209,
+  "best_tuned_mean_cv_ap": 0.2032709281466095,
+  "best_tuned_cv": [
+    {
+      "training_through": 2005,
+      "validation_start": 2006,
+      "validation_end": 2007,
+      "training_rows": 9140,
+      "training_positives": 25,
+      "validation_rows": 2339,
+      "validation_positives": 20,
+      "average_precision": 0.06489602881105701
+    },
+    {
+      "training_through": 2007,
+      "validation_start": 2008,
+      "validation_end": 2009,
+      "training_rows": 12155,
+      "training_positives": 42,
+      "validation_rows": 2467,
+      "validation_positives": 23,
+      "average_precision": 0.06895249330231748
+    },
+    {
+      "training_through": 2009,
+      "validation_start": 2010,
+      "validation_end": 2011,
+      "training_rows": 14525,
+      "training_positives": 61,
+      "validation_rows": 2266,
+      "validation_positives": 18,
+      "average_precision": 0.3329839126620278
+    },
+    {
+      "training_through": 2011,
+      "validation_start": 2012,
+      "validation_end": 2013,
+      "training_rows": 16765,
+      "training_positives": 77,
+      "validation_rows": 2163,
+      "validation_positives": 20,
+      "average_precision": 0.32686940860501495
+    },
+    {
+      "training_through": 2013,
+      "validation_start": 2014,
+      "validation_end": 2015,
+      "training_rows": 18953,
+      "training_positives": 95,
+      "validation_rows": 2128,
+      "validation_positives": 25,
+      "average_precision": 0.22265279735263016
+    }
+  ],
+  "best_tuned_params": {
+    "n_estimators": 200,
+    "learning_rate": 0.010076715822447685,
+    "max_depth": 6,
+    "num_leaves": 40,
+    "min_child_samples": 150,
+    "reg_alpha": 1.061301271663531,
+    "reg_lambda": 0.7167805695810838
+  },
+  "selected_model": "tuned",
+  "selected_params": {
+    "n_estimators": 200,
+    "learning_rate": 0.010076715822447685,
+    "max_depth": 6,
+    "num_leaves": 40,
+    "min_child_samples": 150,
+    "reg_alpha": 1.061301271663531,
+    "reg_lambda": 0.7167805695810838
+  },
+  "holdout": {
+    "accuracy": 0.9285954866958572,
+    "balanced_accuracy": 0.8047736435614709,
+    "precision": 0.08558558558558559,
+    "recall": 0.6785714285714286,
+    "f1": 0.152,
+    "average_precision": 0.3276241541167456,
+    "roc_auc": 0.9115643367173459,
+    "threshold": 0.5,
+    "tn": 2738,
+    "fp": 203,
+    "fn": 9,
+    "tp": 19
+  }
+}

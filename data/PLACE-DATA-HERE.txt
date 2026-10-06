@@ -1,0 +1,2 @@
+Download american_bankruptcy.csv from the Kaggle source linked in ../DATA.md.
+Place it in this folder. The CSV is excluded from version control.
